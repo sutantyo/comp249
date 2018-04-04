@@ -21,9 +21,7 @@ def index():
 
 @app.route('/', method="POST")
 def form():
-    print(bottle.request.forms.get('consent'))
     if bottle.request.forms.get('consent') == "yes":
-        print('here')
         bottle.response.set_cookie('consent','yes')
     bottle.redirect('/')
     return
