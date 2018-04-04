@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Application</title>
+    <style>
+        blockquote{
+            background: #ffda89;
+            padding: 20px;
+            width: 40%;
+            margin: auto;
+        }
+
+        blockquote form{
+
+        }
+    </style>
+</head>
+<body>
+
+    % if consent is "unknown":
+        <section>
+            <blockquote>
+                The following website uses cookie to track your data. If you click on the 'yes'
+                button bellow, then you are giving your consent to the use of cookies.
+                If you click 'no', then we will not use cookies.
+                <br>
+                <br>
+                <form action="/" method="POST">
+                    <input type="submit" value="yes" name="consent">
+                    <input type="submit" value="no" name="consent">
+                </form>
+            </blockquote>
+        </section>
+    % else:
+        <section>
+            <h2>You have visited this site {{n}} times.</h2>
+        </section>
+    % end
+
+</body>
+</html>
