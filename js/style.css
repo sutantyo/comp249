@@ -1,0 +1,9 @@
+a.button {
+	height: 80px;
+	width: 200px;
+	font-size: 20pt;
+	color: black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
